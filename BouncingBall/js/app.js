@@ -1,4 +1,5 @@
 import { Ball } from './ball.js'
+import { Obstacle } from './obstacle.js'
 
 class App {
 
@@ -22,6 +23,7 @@ class App {
         this.canvas.height = this.stageHeight * 2
 
         this.ball = new Ball(this.canvas.width, this.canvas.height, 120)
+        this.obstacle = new Obstacle(550, 600, 650, 100)
 
         this.ctx.scale(1, 1)
 
@@ -31,7 +33,8 @@ class App {
 
     animate(t) {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.ball.draw(this.ctx)
+        this.obstacle.draw(this.ctx)
+        this.ball.draw(this.ctx, [this.obstacle])
         requestAnimationFrame(this.animate.bind(this))
     }
 
