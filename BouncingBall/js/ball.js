@@ -9,7 +9,7 @@ export class Ball {
         this.diameter = this.radius * 2
         this.fieldX = this.x + this.radius
         this.fieldY = this.y + this.radius
-        this.speed = 20.0
+        this.speed = 35.0
         this.directionX = this.speed
         this.directionY = this.speed
 
