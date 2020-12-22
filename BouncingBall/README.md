@@ -16,5 +16,5 @@ http-serve
 ## Example picture 1
 ![](bouncing_ball1.gif)
 
-## Example picture 2 
-> In ready. 
+## Example picture 2
+![](bouncing_ball2.gif) 
