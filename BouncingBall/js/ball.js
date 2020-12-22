@@ -15,7 +15,7 @@ export class Ball {
 
     }
 
-    changeDirection(targetWidth, targetHeight) {
+    bouncingWindow(targetWidth, targetHeight) {
         // top
         if((this.y + this.radius) < this.diameter) {
             this.directionY *= -1
@@ -72,8 +72,7 @@ export class Ball {
         this.x += this.directionX;
         this.y += this.directionY;
 
-        this.changeDirection(this.cWidth, this.cHeight)
-
+        this.bouncingWindow(this.cWidth, this.cHeight)
         this.bouncingObstacle(obstacle)
 
         this.fieldX = this.x
