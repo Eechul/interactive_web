@@ -5,7 +5,6 @@ export class Obstacle {
         this.y = y
         this.width = width;
         this.height = height;
-        // index = 0 시작, index = 1 : 끝
         this.minX = this.x
         this.maxX = this.x + this.width
         this.minY = this.y
