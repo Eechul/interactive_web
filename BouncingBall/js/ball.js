@@ -10,42 +10,41 @@ export class Ball {
         this.fieldX = this.x
         this.fieldY = this.y
         this.speed = 20.0
-        this.xSpeed = this.speed
-        this.ySpeed = this.speed
-        // this.speed = 5.5
+        this.directionX = this.speed
+        this.directionY = this.speed
 
     }
 
     update() {
-        this.x += this.xSpeed;
-        this.y += this.ySpeed;
+        this.x += this.directionX;
+        this.y += this.directionY;
 
         // bottom
         if(this.cHeight < this.y + this.redius) {
             if(this.x > this.fieldX) {
-                this.ySpeed *= -1
+                this.directionY *= -1
             } else if(this.x < this.fieldX) {
-                this.ySpeed *= -1
+                this.directionY *= -1
             }
         }
 
         // right
         if(this.cWidth < this.x + this.redius) {
             if(this.x > this.fieldX) {
-                this.xSpeed *= -1
+                this.directionX *= -1
             }
         }
 
         // left
         if(this.x + this.redius < this.diameter) {
             if(this.x < this.fieldX) {
-                this.xSpeed *= -1
+                this.directionX *= -1
             }
         }
 
         // top
         if((this.y + this.redius) < this.diameter) {
-            this.ySpeed *= -1
+            this.directionY *= -1
         }
 
         this.fieldX = this.x
