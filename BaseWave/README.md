@@ -13,3 +13,6 @@ http-serve
 # step 3 : input browser Url (location:8080/index.html)
 ```
 
+# Example picture
+![](base_wave1.gif)
+
